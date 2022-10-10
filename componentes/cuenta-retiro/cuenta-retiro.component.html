@@ -1,0 +1,43 @@
+<div class="card">
+    <table>
+        <tr>
+            <td>
+                <h2 class="title">{{tituloCard}} - {{subTitulo}}</h2>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div class="flexbox">
+        <div class="item">
+            <div class="content">
+                <span class="saldo-actual">Saldo Actual</span>
+            </div>
+        </div>
+        <div class="item-hr">
+            <div class="content">
+                <div class="hr"></div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <span class="select-opcion">Seleccione una opción</span>
+                <button class="back-button" (click)="volver()" *ngIf="ingresarMontoClicked"><span class="material-icons">arrow_back</span></button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content">
+                <span class="saldo">${{ saldo | currency:'CLP':''}}</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="content button-container" *ngIf="!ingresarMontoClicked">
+                <button class="button1"   (click)="retirarTodo(saldo)" [ngClass]="{clicked: retirarTodoClicked}">Quiero
+                    retirar todo</button>
+                <button class="button2" (click)="ingresarMonto()">Quiero ingresar el monto</button>
+            </div>
+            <div class="content button-container" *ngIf="ingresarMontoClicked">
+                <input #ide class="input" type="number" [value]="0" (keypress)="getInputValue(ide.value)" min="0">
+            </div>
+        </div>
+    </div>
+</div>

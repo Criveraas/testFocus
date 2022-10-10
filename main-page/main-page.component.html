@@ -1,0 +1,13 @@
+<div class="container">
+    <header [titulo]="titulo"></header>
+    <hr class="hr-top">
+
+    <ng-container *ngFor="let card of resp">
+        <cuenta-retiro (propagar)="obtenerValor($event)" [tituloCard]="card.metaNombre" [subTitulo]="card.serie" [saldo]="card.saldoDisponible">
+        </cuenta-retiro>
+    </ng-container>
+
+    <total-retiro [montoTotal]="total"[valor]="valor"></total-retiro>
+    <hr class="hr-bottom">
+    <button class="siguiente">Siguiente</button>
+</div>

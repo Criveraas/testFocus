@@ -1,0 +1,29 @@
+.card {
+    width: 18%;
+    border-radius: 6px;
+    padding: 0px;
+    height: 105px;
+    background: #FFFFFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #59CEC1;
+    float: right;
+    margin-right: -1%;
+
+
+}
+
+div {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 5%;
+    color: #59CEC1;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 15px;
+}
+.monto{
+    font-size: 24px;
+}
